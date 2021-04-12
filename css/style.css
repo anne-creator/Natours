@@ -1,195 +1,515 @@
-    /*
-COLORS:
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
 
-*/
-    
-    *,
-    *::after,
-    *::before {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    html {
-        font-size: 62.5%;
-    }
-    /* project based setting  */
-    
-    body {
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 1.7;
-        color: #777;
-    }
-    /* text-box container */
-    
-    header {
-        position: relative;
-        height: 95vh;
-        background-image: url(/img/hero.jpg);
-        /* try to fit the element inside of the box */
-        /* the border of the top staty the same. if center, then when shrink the page, the top and bottom will all be cropped top */
-        background-size: cover;
-    }
-    /* text-box logo element */
-    
-    .logo-container {
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-    
-    .logo {
-        /* control the height, the browser will figure out the width */
-        height: 3.5rem;
-    }
-    /* text-box title element */
-    
-    .text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    
-    .heading-primary {
-        color: #ffffff;
-        text-transform: uppercase;
-        margin-bottom: 56px;
-    }
-    
-    .heading-primary-main {
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.6rem;
-        animation-name: moveInLeft;
-        animation-duration: 1s;
-        /* animation-timing-function: ease-in; */
-    }
-    
-    .heading-primary-sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        padding: 0 auto;
-        letter-spacing: 1.6rem;
-        animation-name: moveInRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        /* animation-timing-function: ease-out; */
-        /* animation-iteration-count:3; */
-    }
-    
-    .btn:link,
-    .btn:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        /* in border-box model, the inline-block works as block element */
-        display: inline-block;
-        /* 当btn被hover，或者clicked之后，用0.2s出现下面hover和点击之后的样子 */
-        transition: all .2s;
-        border-radius: 100px;
-        /* 因为要给btn：：after增加absolute，所以要给：：after的父亲增加relative，伪选择器的父选择器是原btn */
-        position: relative;
-    }
-    
-    .button-animated {
-        animation: moveInButton .5s ease-out .75s;
-        /*The animation was visible before the animation happens, coz the delay of 0.75s. style will be apply before animaiton starts   */
-        animation-fill-mode: backwards;
-    }
-    /* 点击后印象减少 */
-    
-    .btn:hover {
-        transform: translateY(-0.3rem);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    }
-    /* when we click the btn */
-    
-    .btn:active {
-        transform: translateY(-0.1rem);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    }
-    /* 一个和btn完全一样的，在btn底下的psedu btn，for 动画*/
-    
-    .btn::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        /* need to put the pseudo ele behind the btn element, by doing so, make it absolute element */
-        /* relative position is in relative with its father*/
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all 0.2s
-    }
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/* 本按钮的下面有一个 */
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 100%; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+@keyframes moveInButton {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0; }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+/* project based setting  */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  background-clip: background;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* try to fit the element inside of the box */
+  /* the border of the top staty the same. if center, then when shrink the page, the top and bottom will all be cropped top */
+  background-size: cover;
+  /* always stays at center */
+  background-position: center;
+  /* the four corner position: relative position with the left top borner */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* text-box title element */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+    .header__logo-box__logo {
+      /* control the height, the browser will figure out the width */
+      height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+/* text-box logo element */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 56px; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.6rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 auto;
+    letter-spacing: 1.6rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(last-child) {
+      margin-right: 2rem; }
+  .row .col-1-of-2 {
+    width: 30px;
+    display: inline-block;
+    background-color: red; }
+
+.btn {
+  /* 点击后印象减少 */
+  /* when we click the& */
+  /* 一个btn完全一样的，btn底下的psedubtn，for 动画*/
+  /* 此按钮颜色，背景色和大小 */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    /* in border-box model, the inline-block works as block element */
+    display: inline-block;
+    /* btn被hover，或者clicked之后，用0.2s出现下面hover和点击之后的样子 */
+    transition: all .2s;
+    border-radius: 100px;
+    /* 因为要btn：：after增加absolute，所以要给：：after的父亲增加relative，伪选择器的父选择器是btn */
+    position: relative; }
+  .btn--animated {
+    animation: moveInButton .5s ease-out .75s;
+    /*The animation was visible before the animation happens, coz the delay of 0.75s. style will be apply before animaiton starts   */
+    animation-fill-mode: backwards; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     /* 普遍按钮底下一个相同的ele，当hover的时候 */
     /* when we hover the button, we want to put something in the after psude element */
-    /* this is a whole new ::after element only when we hover on the btn */
-    
+    /* this is a whole new ::after element only when we hover on the& */ }
     .btn:hover::after {
-        transform: scaleX(1.2) scaleY(1.3);
-        opacity: 0;
-    }
-    /* 此按钮颜色，背景色和大小 */
-    
-    .btn-white {
-        background-color: #fff;
-        color: #777;
-        padding: 1.5rem 4rem;
-    }
-    /* 本按钮的下面有一个 */
-    
-    .btn-white::after {
-        background-color: #fff;
-    }
-    
-    @keyframes moveInLeft {
-        0% {
-            transform: translateX(-10rem);
-            opacity: 0;
-        }
-        80% {
-            transform: translateX(1rem);
-        }
-        100% {
-            transform: translateX(0);
-            opacity: 100%
-        }
-    }
-    
-    @keyframes moveInRight {
-        0% {
-            transform: translateX(10rem);
-            opacity: 0;
-        }
-        80% {
-            transform: translateX(-1rem);
-        }
-        100% {
-            opacity: 100%;
-            transform: translateX(0);
-        }
-    }
-    
-    @keyframes moveInButton {
-        0% {
-            transform: translateY(5rem);
-            opacity: 0;
-        }
-        100% {
-            opacity: 100%;
-            transform: translateX(0);
-        }
-    }
+      transform: scaleX(1.2) scaleY(1.3);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    /* need to put the pseudo ele behind the btn element, by doing so, make it absolute element */
+    /* relative position is in relative with its father*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s; }
+  .btn--white {
+    background-color: #fff;
+    color: #777;
+    padding: 1.5rem 4rem; }
+    .btn--white::after {
+      background-color: #fff; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }

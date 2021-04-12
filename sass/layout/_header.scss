@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+    /* try to fit the element inside of the box */
+    /* the border of the top staty the same. if center, then when shrink the page, the top and bottom will all be cropped top */
+    background-size: cover;
+    /* always stays at center */
+    background-position: center;
+    /* the four corner position: relative position with the left top borner */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+        &__logo {
+            /* control the height, the browser will figure out the width */
+            height: 3.5rem;
+        }
+    }
+
+    /* text-box title element */
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+
+/* text-box logo element */
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.6rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 0 auto;
+        letter-spacing: 1.6rem;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+    }
+}
