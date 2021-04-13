@@ -10,7 +10,8 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Sections
    ========================================================================== */
@@ -18,13 +19,15 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Render the `main` element consistently in IE.
  */
 main {
-  display: block; }
+  display: block;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -32,7 +35,8 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -41,12 +45,14 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -56,7 +62,8 @@ pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -64,7 +71,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -75,15 +83,18 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -95,13 +106,15 @@ samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -112,13 +125,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -126,7 +142,8 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /* Forms
    ========================================================================== */
@@ -146,7 +163,8 @@ textarea {
   line-height: 1.15;
   /* 1 */
   margin: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Show the overflow in IE.
@@ -155,7 +173,8 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -164,7 +183,8 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
@@ -173,7 +193,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+}
 
 /**
  * Remove the inner border and padding in Firefox.
@@ -183,7 +204,8 @@ button::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -192,13 +214,15 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em; }
+  padding: 0.35em 0.75em 0.625em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -207,7 +231,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -218,19 +243,22 @@ legend {
   padding: 0;
   /* 3 */
   white-space: normal;
-  /* 1 */ }
+  /* 1 */
+}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10.
@@ -238,17 +266,20 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -258,13 +289,15 @@ textarea {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -274,7 +307,8 @@ textarea {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Interactive
    ========================================================================== */
@@ -282,13 +316,15 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /* Misc
    ========================================================================== */
@@ -296,55 +332,127 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 /* 本按钮的下面有一个 */
+@-webkit-keyframes moveInLeft {
+  0% {
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
 @keyframes moveInLeft {
   0% {
-    transform: translateX(-10rem);
-    opacity: 0; }
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+    opacity: 0;
+  }
   80% {
-    transform: translateX(1rem); }
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
   100% {
-    transform: translateX(0);
-    opacity: 100%; } }
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
-    transform: translateX(10rem);
-    opacity: 0; }
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+    opacity: 0;
+  }
   80% {
-    transform: translateX(-1rem); }
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
   100% {
     opacity: 100%;
-    transform: translateX(0); } }
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveInButton {
+  0% {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 
 @keyframes moveInButton {
   0% {
-    transform: translateY(5rem);
-    opacity: 0; }
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    opacity: 0;
+  }
   100% {
     opacity: 100%;
-    transform: translateX(0); } }
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 /* project based setting  */
 body {
@@ -353,49 +461,64 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 30px; }
+  padding: 30px;
+}
 
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   background-clip: background;
   color: transparent;
   letter-spacing: .2rem;
+  -webkit-transition: all .2s;
   transition: all .2s;
-  margin-bottom: 8rem; }
-  .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .paragraph {
-  font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
 
 .u-center-text {
-  text-align: center; }
+  text-align: center;
+}
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+}
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+}
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem;
+}
 
 .header {
   position: relative;
   height: 95vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   /* try to fit the element inside of the box */
   /* the border of the top staty the same. if center, then when shrink the page, the top and bottom will all be cropped top */
@@ -403,63 +526,90 @@ body {
   /* always stays at center */
   background-position: center;
   /* the four corner position: relative position with the left top borner */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* text-box title element */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-    .header__logo-box__logo {
-      /* control the height, the browser will figure out the width */
-      height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* text-box title element */
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo-box__logo {
+  /* control the height, the browser will figure out the width */
+  height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /* text-box logo element */
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 56px; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.6rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 0 auto;
-    letter-spacing: 1.6rem;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
+  margin-bottom: 56px;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.6rem;
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 auto;
+  letter-spacing: 1.6rem;
+  -webkit-animation-name: moveInRight;
+          animation-name: moveInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
 
 .row {
   max-width: 114rem;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem)/2); }
-  .row .col-1-of-3 {
-    width: calc((100% - 6rem*2)/3); }
-  .row .col-1-of-4 {
-    width: calc((100% - 6rem*3)/4); }
+}
+
+.row:not(last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(last-child) {
+  margin-right: 2rem;
+}
+
+.row .col-1-of-2 {
+  width: cal(53rem);
+  display: inline-block;
+  background-color: red;
+}
 
 .btn,
 .btn:link,
@@ -469,32 +619,45 @@ body {
   /* in border-box model, the inline-block works as block element */
   display: inline-block;
   /* btn被hover，或者clicked之后，用0.2s出现下面hover和点击之后的样子 */
+  -webkit-transition: all .2s;
   transition: all .2s;
   border-radius: 100px;
   /* 因为要btn：：after增加absolute，所以要给：：after的父亲增加relative，伪选择器的父选择器是btn */
   position: relative;
-  font-size: 1.6rem; }
+}
 
 .btn--animated {
-  animation: moveInButton .5s ease-out .75s;
+  -webkit-animation: moveInButton .5s ease-out .75s;
+          animation: moveInButton .5s ease-out .75s;
   /*The animation was visible before the animation happens, coz the delay of 0.75s. style will be apply before animaiton starts   */
-  animation-fill-mode: backwards; }
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
 
 /* 点击后印象减少 */
 .btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* 普遍按钮底下一个相同的ele，当hover的时候 */
   /* when we hover the button, we want to put something in the after psude element */
-  /* this is a whole new ::after element only when we hover on thebtn */ }
-  .btn:hover btn::after {
-    transform: scaleX(1.2) scaleY(1.3);
-    opacity: 0; }
+  /* this is a whole new ::after element only when we hover on thebtn */
+}
+
+.btn:hover btn::after {
+  -webkit-transform: scaleX(1.2) scaleY(1.3);
+          transform: scaleX(1.2) scaleY(1.3);
+  opacity: 0;
+}
 
 /* when we click thebtn */
 .btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 /* 一个btn完全一样的，btn底下的psedubtn，for 动画*/
 .btn::after {
@@ -509,90 +672,24 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.2s; }
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
 
 /* 此按钮颜色，背景色和大小 */
 .btn--white {
   background-color: #fff;
   color: #777;
-  padding: 1.5rem 4rem; }
-  .btn--white btn::after {
-    background-color: #fff; }
+  padding: 1.5rem 4rem;
+}
 
-.btn-text:link, .btn-text:visited {
-  font-size: 1.6rem;
-  color: #55c57a;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid #55c57a;
-  padding: 3px;
-  transition: all 0.2s; }
-
-.btn-text:hover {
-  background-color: #55c57a;
-  color: #fff;
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px); }
-
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transform: translateY(0); }
-
-.composition {
-  position: relative; }
-  .composition__photo {
-    width: 55%;
-    box-shadow: 0 1.5rem 4 rem rgba(0, 0, 0, 0.4);
-    border-radius: 2px;
-    position: absolute;
-    z-index: 10;
-    transition: all 0.2;
-    outline-offset: 1rem; }
-    .composition__photo--p1 {
-      left: 0;
-      top: -2rem; }
-    .composition__photo--p2 {
-      right: 0;
-      top: 2rem; }
-    .composition__photo--p3 {
-      left: 20%;
-      top: 10rem; }
-    .composition__photo:hover {
-      outline: 1.5rem solid rgba(85, 197, 122, 0.5);
-      transform: scale(1.05);
-      box-shadow: 0 2.5rem 4 rem rgba(0, 0, 0, 0.5);
-      z-index: 20; }
-  .composition:hover .composition__photo:not(:hover) {
-    transform: scale(0.95); }
-
-.feature-box {
-  background-color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-  .feature-box__icon {
-    font-size: 6rem;
-    margin-bottom: .5rem;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: transform .3s; }
-  .feature-box:hover {
-    transform: translateY(-1.5rem) scale(1.03); }
+.btn--white btn::after {
+  background-color: #fff;
+}
 
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
-  margin-top: -20vh; }
-
-.section-features {
-  padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
-  background-size: cover;
-  margin-top: -2rem;
-  transform: skewY(-7deg); }
-  .section-features > * {
-    transform: skewY(7deg); }
+  margin-top: -20vh;
+}
+/*# sourceMappingURL=main.css.map */

@@ -22,7 +22,10 @@
 'layout/footer';
 
 // 5. Components
-@import 'components/button';
+@import 'components/button',
+'components/card',
+ 'components/composition',
+ 'components/featur-box';
 
 // 6. Page-specific styles
 @import 'pages/home';

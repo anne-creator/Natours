@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    f
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -9,6 +10,7 @@
       rel="stylesheet"
     />
     <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+    <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -38,36 +40,152 @@
     </header>
 
     <!-- main part -->
-    <section class="section-about">
-      <!-- utility class:simple class that only have one single goal -->
-      <div class="u-center-text u-margin-bottom-small">
-        <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
-      </div>
-      <div class="row">
-        <div class="col-1-of-2">
-          <h3 class="heading-tertiary u-margin-bottom-small">
-            You're going to fall in love with nature
-          </h3>
-          <p class="paragraph">
-            Have you been coding CSS for some time, but want to take your game
-            to the next level? Do you feel confused with CSS jargon like
-            inheritance, specificity or the cascade? What if there was one
-            resource, one place, where you could learn all the advanced and
-            modern CSS techniques and properties you've been reading about?
-          </p>
-          <h3 class="heading-tertiary">
-            LIve adventrues like you never have before
-          </h3>
-          <p class="paragraph">
-            Have you been coding CSS for some time, but want to take your game
-            to the next level? Do you feel confused with CSS jargon like
-            inheritance, specificity or the cascade? What if there was one
-            resource, one place, where you could learn all the advanced and
-            modern CSS techniques and properties you've been reading about?
-          </p>
+    <main>
+      <!-- main1 => section about part -->
+      <section class="section-about">
+        <!-- utility class:simple class that only have one single goal -->
+        <!-- head -->
+        <div class="u-center-text u-margin-bottom-small">
+          <h2 class="heading-secondary">
+            Exciting tours for adventurous people
+          </h2>
         </div>
-        <div class="col-1-of-2">image composition</div>
-      </div>
-    </section>
+
+        <!-- main2 > photo part -->
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              You're going to fall in love with nature
+            </h3>
+
+            <p class="paragraph">
+              Have you been coding CSS for some time, but want to take your game
+              to the next level? Do you feel confused with CSS jargon like
+              inheritance, specificity or the cascade? What if there was one
+              resource, one place, where you could learn all the advanced and
+              modern CSS techniques and properties you've been reading about?
+            </p>
+
+            <h3 class="heading-tertiary">
+              LIve adventrues like you never have before
+            </h3>
+
+            <p class="paragraph">
+              Have you been coding CSS for some time, but want to take your game
+              to the next level? Do you feel confused with CSS jargon like
+              inheritance, specificity or the cascade? What if there was one
+              resource, one place, where you could learn all the advanced and
+              modern CSS techniques and properties you've been reading about?
+            </p>
+
+            <a href="#" class="btn-text">Learn more &rarr;</a>
+          </div>
+
+          <div class="col-1-of-2">
+            <div class="composition">
+              <img
+                src="img/nat-1.jpg"
+                alt="senary phoot 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="img/nat-2.jpg"
+                alt="senary photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="img/nat-3.jpg"
+                alt="senary photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- main3 => features part -->
+
+      <!-- for the whole section  -->
+      <section class="section-features">
+        <!-- card container -->
+        <div class="row">
+          <!-- set grid -->
+          <div class="col-1-of-4">
+            <!-- single card -->
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Meet Natures
+              </h3>
+
+              <p class="feature-box__text">
+                Have you been coding CSS for some time, but want to take your
+                game to the next level? Do you
+              </p>
+            </div>
+            <!-- end of single card -->
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-compass"></i>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Find Your way
+              </h3>
+
+              <p class="feature-box__text">
+                Have you been coding CSS for some time, but want to take your
+                game to the next level? Do you
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-map"></i>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Live a healthier life
+              </h3>
+
+              <p class="feature-box__text">
+                Have you been coding CSS for some time, but want to take your
+                game to the next level? Do you
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-heart"></i>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Explore the world
+              </h3>
+
+              <p class="feature-box__text">
+                Have you been coding CSS for some time, but want to take your
+                game to the next level? Do you feel confused
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end of section features > row  -->
+      </section>
+
+      <section class="section-tours">
+        <div class="u-center-text u-margin-bottom-small">
+          <h2 class="heading-secondary">Most popular tours</h2>
+        </div>
+
+        <div class="row">
+          <div class="clo-a-of-3">1</div>
+          <div class="clo-a-of-3">2</div>
+          <div class="clo-a-of-3">3</div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
