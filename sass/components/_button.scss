@@ -70,6 +70,16 @@
         }
     }
 
+    .btn--green {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 1.5rem 4rem;
+
+        btn::after {
+            background-color: $color-primary;
+        }
+    }
+
     .btn-text {
         &:link,
         &:visited {
