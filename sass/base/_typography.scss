@@ -11,6 +11,10 @@ body {
     color: $color-white;
     text-transform: uppercase;
     margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     &--main {
         display: block;

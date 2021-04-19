@@ -4,6 +4,9 @@
 .header {
     position: relative;
     height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
     /* try to fit the element inside of the box */
@@ -27,11 +30,17 @@
 
     /* text-box title element */
     &__text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        transform: translateY(-20%);
+
+        // position: absolute;
+        // top: 40%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
